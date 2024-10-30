@@ -910,6 +910,7 @@ footer {
     cursor: pointer;
     padding: 10px;
     z-index: 1001;
+    background: white;
 }
 
 .menu-icon {
