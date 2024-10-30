@@ -96,14 +96,14 @@ main {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
     color: rgb(247, 160, 0);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
@@ -753,90 +753,80 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
     padding: 2rem 20px;
-    background-color: #001f3f;
+    background-color: #072039;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .clientes-info {
     text-align: center;
     max-width: 800px;
     margin-bottom: 2rem;
-    color: #ECF0F1;
+    color: #333;
 }
 
 .clientes-titulo {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: #fdfeff;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .clientes-descripcion {
     font-size: 1.2rem;
-    color: #ECF0F1;
+    color: #ffffff;
     line-height: 1.5;
 }
 
 .clientes-lista {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.cliente-card {
-    padding: 20px;
-    width: 330px;
-    min-height: 370px;
-    border-radius: 20px;
-    background: #FFFFFF;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: 0.4s;
-    background-color: var(--secondary-color);
-    color: #4a6bb38a;
+.cliente {
+    background-color: #ffffff;
+    padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cliente-card:hover {
-    translate: 0 -10px;
+.cliente:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cliente-card-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 15px 0 0 10px;
+.cliente h3 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 0.5rem;
 }
 
-.cliente-card-image {
-    min-height: 170px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    box-shadow: inset 5px 5px 3px #88b0e6, inset -5px -5px 3px #aad4ff;
-}
-
-.cliente-card-body {
-    margin: 13px 0 0 10px;
-    color: #ffffff;
-    font-size: 15px;
+.cliente p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
 }
 
 .cliente-footer {
-    float: right;
-    margin: 28px 0 0 18px;
-    font-size: 13px;
-    color: #fcfdfd;
+    margin-top: 1rem;
 }
 
-.cliente-by-name {
-    font-weight: 700;
+.cliente-footer span {
+    color: #2980b9;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cliente-footer span:hover {
+    color: #3498db;
 }
 
 @media (max-width: 600px) {
@@ -942,11 +932,13 @@ footer {
 }
 
 .menu-icon::before {
-    top: -8px;
+    top: -7px;
+    left: 1px;
 }
 
 .menu-icon::after {
     bottom: -8px;
+    right: -1px;
 }
 
 /* Animación del ícono cuando está activo */
@@ -1062,15 +1054,15 @@ footer {
 
 /* Colores específicos para cada tarjeta */
 .cards .instagram {
-    background-color: #674e2b;
+    background-color: #f43f5e;
 }
 
 .cards .formulario {
-    background-color: #a56100;
+    background-color: #3b82f6;
 }
 
 .cards .whatsapp {
-    background-color: #058534;
+    background-color: #22c55e;
 }
 
 .contact-modal .close {
